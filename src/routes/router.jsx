@@ -3,9 +3,9 @@ import React from 'react';
 import About from '../container/aboutus';
 import Work from '../container/workwithus';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Header from '../component/Header';
+import Header from '../component/Header/Header';
 
-const Routing=()=> {
+const AppRouter=()=> {
     return (
        
            <Router>
@@ -17,4 +17,4 @@ const Routing=()=> {
     )
 }
 
-export default Routing;
+export default AppRouter;
