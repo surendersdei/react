@@ -2,7 +2,7 @@ import React from 'react';
 
 import About from '../container/aboutus';
 import Work from '../container/workwithus';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from '../component/Header/Header';
 
 const AppRouter=()=> {
@@ -10,8 +10,10 @@ const AppRouter=()=> {
        
            <Router>
                 <Header/>
-                <Route path="/about" component={About}/>
-                <Route path="/work" component={Work}/>
+                <Switch>
+                    <Route exact path="/about" component={About}/>
+                    <Route path="/work" component={Work}/>
+                </Switch>
            </Router>
        
     )
